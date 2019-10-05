@@ -1,0 +1,1 @@
+from object_detection_service import detect_labels
