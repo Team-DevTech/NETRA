@@ -8,8 +8,8 @@ GPIO.setmode( GPIO.BCM)
 
 GPIO.setup(20,GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(21,GPIO.IN,pull_up_down=GPIO.PUD_UP)
-#GPIO.setup(19,GPIO.IN,pull_up_down=GPIO.PUD_UP)
-
+GPIO.setup(19,GPIO.IN,pull_up_down=GPIO.PUD_UP)
+"""
 imagePath = "/home/pi/Desktop/netra/images/"
 image = imagePath + "capture.jpg"
 image1 = imagePath + "capture1.jpg"
@@ -87,6 +87,6 @@ if __name__ == "__main__":
             ocrfunc()
             PushButton2 = True
     
-
+"""
 
 
