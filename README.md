@@ -9,3 +9,10 @@ It contains basic three things
   1. Raspberry Pi
   2. Camera
   3. Speech
+
+run as:-
+  terminal commands
+   source venv/bin/activate
+   go to path of project
+   export GOOGLE_APPLICATION_CREDENTIALS= " path of json file"
+   python2 edit.py
