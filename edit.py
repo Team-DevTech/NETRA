@@ -1,4 +1,7 @@
 """
+#The same procedure is written in different ways with upgrades
+#so you can refer all of them
+
 import subprocess
 from google.cloud import vision
 import io
@@ -88,7 +91,7 @@ if __name__ == "__main__":
             ocrfunc()
             PushButton2 = True
 
-     
+ ---------------------------------------------------------------------------------------------------------------------------
 import subprocess
 from google.cloud import vision
 import io
@@ -213,8 +216,9 @@ if __name__ == "__main__":
     myObj.save("/home/pi/Desktop/netra/hello.mp3")
 #     os.system("mpg321 hello.mp3")
     subprocess.call(["vlc", "--vout", "none", "/home/pi/Desktop/netra/hello.mp3"])
-"""
- import subprocess
+    
+    """
+import subprocess
 from google.cloud import vision
 import io
 import time
