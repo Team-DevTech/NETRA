@@ -18,7 +18,7 @@ imagePath = "/home/pi/Desktop/netra/images/"
 image = imagePath + "capture.jpg"
 image1 = imagePath + "capture1.jpg"
 def detect_text(path):
-    """Detects text in the file."""
+    #Detects text in the file
     
     client = vision.ImageAnnotatorClient()
     final = []
@@ -38,7 +38,7 @@ def detect_text(path):
     
     
 def detect_labels(path):
-    """Detects labels in the file."""
+    # Detects labels in the file.
     labelArray= []
     client = vision.ImageAnnotatorClient()
 
@@ -56,10 +56,10 @@ def detect_labels(path):
         labelArray.append(val.encode("utf-8"))
     return labelArray
 def labelfunc():
-    """TODO: Set a trigger event"""
+    # TODO: Set a trigger event
     #while True:
         #if button1=="pressed":
-    """Button For Object Detection"""
+    # Button For Object Detection
     subprocess.call(["fswebcam", "-r", "640x480", "--jpeg", "85", "-D", "1", image])
     recognizedObjects = detect_labels(image)
     str1 = ' '.join(recognizedObjects)
@@ -67,9 +67,9 @@ def labelfunc():
     print(str1)
     subprocess.call(["gtts-cli", strFinal , "--output", "/home/pi/Desktop/hello.mp3"])
     subprocess.call(["vlc", "--vout", "none", "/home/pi/Desktop/hello.mp3"])
-    """TODO: Pass this Above array in google text to speech code"""
+    # TODO: Pass this Above array in google text to speech code
         #if button2 =="pressed":
-    """Execute OCR Script"""
+    # Execute OCR Script
 def ocrfunc():
     time.sleep(2)
     subprocess.call(["fswebcam", "-r", "640x480", "--jpeg", "85", "-D", "1", image1])
@@ -110,7 +110,7 @@ imagePath = "/home/pi/Desktop/netra/images/"
 image = imagePath + "capture.jpg"
 image1 = imagePath + "capture1.jpg"
 def detect_text(path):
-    """Detects text in the file."""
+    # Detects text in the file.
     
     client = vision.ImageAnnotatorClient()
     final = []
@@ -130,7 +130,7 @@ def detect_text(path):
     
     
 def detect_labels(path):
-    """Detects labels in the file."""
+    # Detects labels in the file.
     labelArray= []
     client = vision.ImageAnnotatorClient()
 
@@ -148,10 +148,10 @@ def detect_labels(path):
         labelArray.append(val.encode("utf-8"))
     return labelArray
 def labelfunc():
-    """TODO: Set a trigger event"""
+    # TODO: Set a trigger event
     #while True:
         #if button1=="pressed":
-    """Button For Object Detection"""
+    # Button For Object Detection
     subprocess.call(["fswebcam", "-r", "640x480", "--jpeg", "85", "-D", "1", image])
     recognizedObjects = detect_labels(image)
     str1 = ' '.join(recognizedObjects)
@@ -164,9 +164,9 @@ def labelfunc():
 #     os.system("mpg321 hello.mp3")
     subprocess.call(["vlc", "--vout", "none", "/home/pi/Desktop/netra/hello.mp3"])
 
-    """TODO: Pass this Above array in google text to speech code"""
+    # TODO: Pass this Above array in google text to speech code
         #if button2 =="pressed":
-    """Execute OCR Script"""
+    # Execute OCR Script
 def ocrfunc():
     #time.sleep(2)
     subprocess.call(["fswebcam", "-r", "640x480", "--jpeg", "85", "-D", "1", image1])
